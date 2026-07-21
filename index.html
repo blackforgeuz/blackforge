@@ -32,6 +32,7 @@
 
   <div style="position:fixed;left:0;right:0;bottom:0;height:38vh;z-index:0;pointer-events:none;background:radial-gradient(ellipse 90% 80% at 50% 120%, rgba(176,106,31,.25), transparent 60%), radial-gradient(ellipse 45% 40% at 50% 115%, rgba(245,201,92,.18), transparent 65%)"></div>
   <div id="bf-embers" style="position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:1"></div>
+  <canvas id="bf-trail" style="position:fixed;inset:0;pointer-events:none;z-index:240"></canvas>
 
   <div id="bf-view" data-screen-label="3D SPACE" style="position:fixed;inset:0;z-index:2;perspective:1250px;perspective-origin:50% 50%;cursor:grab;touch-action:none;overflow:hidden">
     <div id="bf-cam" style="position:absolute;inset:0;transform-style:preserve-3d;pointer-events:none">
@@ -381,6 +382,7 @@ class Component extends DCLogic {
     this.flyTo(0, true);
     setTimeout(() => { this.enter(); }, this.reduce ? 200 : 2000);
     this.bindInput();
+    this.initTrail();
     this.raf = requestAnimationFrame(this.tick);
     this.onResize = () => this.layout();
     window.addEventListener('resize', this.onResize);
@@ -405,6 +407,69 @@ class Component extends DCLogic {
     window.removeEventListener('pointermove', this.onPMove);
     window.removeEventListener('pointerup', this.onPUp);
     window.removeEventListener('keydown', this.onKey);
+    if (this.onTrailMove) window.removeEventListener('pointermove', this.onTrailMove);
+    if (this._trailResize) window.removeEventListener('resize', this._trailResize);
+  }
+
+  initTrail() {
+    if (this.reduce) return;
+    const cv = document.getElementById('bf-trail');
+    if (!cv) return;
+    this.trailCv = cv;
+    this.trailCtx = cv.getContext('2d');
+    this.parts = [];
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const size = () => {
+      cv.width = innerWidth * dpr; cv.height = innerHeight * dpr;
+      cv.style.width = innerWidth + 'px'; cv.style.height = innerHeight + 'px';
+      this.trailCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    };
+    size();
+    this._trailResize = size;
+    window.addEventListener('resize', size);
+    this.lastTrail = { x: 0, y: 0, has: false };
+    this.onTrailMove = e => {
+      const x = e.clientX, y = e.clientY;
+      if (this.lastTrail.has) {
+        const dx = x - this.lastTrail.x, dy = y - this.lastTrail.y;
+        const dist = Math.hypot(dx, dy);
+        const n = Math.min(7, Math.max(1, Math.round(dist / 6)));
+        for (let i = 0; i < n; i++) {
+          const t = i / n;
+          this.spawnPart(this.lastTrail.x + dx * t, this.lastTrail.y + dy * t, dist);
+        }
+      }
+      this.lastTrail = { x, y, has: true };
+    };
+    window.addEventListener('pointermove', this.onTrailMove, { passive: true });
+  }
+
+  spawnPart(x, y, speed) {
+    const cols = ['#f5c95c', '#ffd97a', '#d4a437', '#b06a1f'];
+    const spread = Math.min(1, speed / 40);
+    this.parts.push({
+      x: x + (Math.random() - 0.5) * 5, y: y + (Math.random() - 0.5) * 5,
+      vx: (Math.random() - 0.5) * (0.5 + spread), vy: -(0.25 + Math.random() * (0.7 + spread)),
+      life: 1, decay: 0.016 + Math.random() * 0.022,
+      size: 0.8 + Math.random() * 2.2, color: cols[Math.random() * cols.length | 0]
+    });
+    if (this.parts.length > 260) this.parts.splice(0, this.parts.length - 260);
+  }
+
+  drawTrail() {
+    const ctx = this.trailCtx;
+    ctx.clearRect(0, 0, innerWidth, innerHeight);
+    ctx.globalCompositeOperation = 'lighter';
+    for (let i = this.parts.length - 1; i >= 0; i--) {
+      const p = this.parts[i];
+      p.x += p.vx; p.y += p.vy; p.vy += 0.01; p.vx *= 0.98; p.life -= p.decay;
+      if (p.life <= 0) { this.parts.splice(i, 1); continue; }
+      ctx.globalAlpha = p.life;
+      ctx.shadowBlur = 9; ctx.shadowColor = p.color;
+      ctx.fillStyle = p.color;
+      ctx.beginPath(); ctx.arc(p.x, p.y, Math.max(0.2, p.size * p.life), 0, Math.PI * 2); ctx.fill();
+    }
+    ctx.globalAlpha = 1; ctx.shadowBlur = 0; ctx.globalCompositeOperation = 'source-over';
   }
 
   panelPos(i) { const p = this.POS[i]; return { x:p[0], y:p[1], z:p[2]*this.depth, face:p[3] }; }
@@ -650,6 +715,7 @@ class Component extends DCLogic {
 
   tick = () => {
     this.raf = requestAnimationFrame(this.tick);
+    if (this.trailCtx) this.drawTrail();
     if (!this.world) return;
     const c = this.cam, t = this.tgt;
     const k = this.reduce ? 1 : (this.auto ? 0.06 : (this.dragging ? 0.28 : 0.12));
