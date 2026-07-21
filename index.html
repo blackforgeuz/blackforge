@@ -692,7 +692,14 @@ class Component extends DCLogic {
     }, true);
 
     view.addEventListener('wheel', e => {
-      if (e.target.closest('.bf-scroll')) return;
+      let sc = e.target.closest('.bf-scroll');
+      if (!sc) {
+        const st = this.sections[this.nearestIdx()];
+        sc = st ? st.querySelector('.bf-scroll') : null;
+      }
+      if (sc && sc.scrollHeight > sc.clientHeight + 1) {
+        sc.scrollTop += e.deltaY;
+      }
       e.preventDefault();
     }, { passive: false });
 
