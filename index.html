@@ -66,15 +66,20 @@
           <div class="bf-scroll" style="position:absolute;inset:0;padding:4.4em 2.6em 2.2em;overflow-y:auto;overscroll-behavior:contain;touch-action:pan-y;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:rgba(212,164,55,.4) transparent">
             <p style="margin:0 0 .8em;color:#d4a437;letter-spacing:.2em;font-size:.8rem">{{ t.prodCatch }}</p>
             <h3 style="margin:0 0 .8em;font-family:'Shippori Mincho',serif;font-weight:600;font-size:1.5rem;color:#e9e2d4">{{ t.prodName }}</h3>
-            <div style="position:relative;overflow:hidden;margin:1.6em 0;border:1px solid rgba(212,164,55,.35);background:radial-gradient(ellipse 60% 90% at 50% 115%, rgba(176,106,31,.22), transparent 65%), #1e1a15;aspect-ratio:16/8;display:flex;align-items:center;justify-content:center">
-              <span style="font-family:'Bebas Neue','Oswald',sans-serif;font-size:clamp(1.8rem,3.6vw,3rem);letter-spacing:.14em;line-height:1;background:linear-gradient(100deg,#8a5a14 0%,#d4a437 30%,#f5c95c 50%,#d4a437 70%,#8a5a14 100%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:sheen 6s linear infinite">COMING SOON</span>
-            </div>
+            <a href="https://blazecrown-game.com/" target="_blank" rel="noopener" style="position:relative;overflow:hidden;border:1px solid rgba(212,164,55,.35);background:radial-gradient(ellipse 60% 90% at 50% 115%, rgba(176,106,31,.28), transparent 65%), #1e1a15;aspect-ratio:16/9;margin:1.6em 0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6em;text-decoration:none" style-hover="border-color:#f5c95c">
+                <span style="font-family:'Bebas Neue','Oswald',sans-serif;font-size:clamp(1.8rem,3.6vw,3rem);letter-spacing:.14em;line-height:1;color:#f5c95c">BLAZECROWN</span>
+                <span style="font-size:.72rem;letter-spacing:.2em;color:#8a8177">blazecrown-game.com</span>
+                <video src="./blazecrown.mp4" autoplay="" muted="" loop="" playsinline="" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none"></video>
+              </a>
             <p style="margin:0;color:#8a8177;font-size:.92rem">{{ t.prodDesc }}</p>
             <div style="display:flex;gap:.9em;margin-top:1.6em;flex-wrap:wrap">
               <span style="border:1px solid rgba(212,164,55,.4);padding:.55em 1.2em;display:flex;flex-direction:column;min-width:9.5em;opacity:.6"><span style="font-size:.58rem;letter-spacing:.25em;color:#d4a437">COMING SOON</span><span style="font-family:'Bebas Neue','Oswald',sans-serif;letter-spacing:.15em;color:#e9e2d4;font-size:.95rem">APP STORE</span></span>
               <span style="border:1px solid rgba(212,164,55,.4);padding:.55em 1.2em;display:flex;flex-direction:column;min-width:9.5em;opacity:.6"><span style="font-size:.58rem;letter-spacing:.25em;color:#d4a437">COMING SOON</span><span style="font-family:'Bebas Neue','Oswald',sans-serif;letter-spacing:.15em;color:#e9e2d4;font-size:.95rem">GOOGLE PLAY</span></span>
             </div>
-          </div>
+            <div style="display:flex;gap:.9em;margin-top:1.2em;flex-wrap:wrap">
+                <a href="https://blazecrown-game.com/" target="_blank" rel="noopener" style="border:1px solid #d4a437;padding:.7em 1.4em;color:#f5c95c;text-decoration:none;font-family:'Bebas Neue','Oswald',sans-serif;letter-spacing:.18em;font-size:.95rem;display:flex;align-items:center;gap:.6em" style-hover="background:rgba(212,164,55,.12)">{{ t.prodVisit }} ↗</a>
+              </div>
+                      </div>
           <div style="position:absolute;left:0;right:0;bottom:0;height:2px;z-index:2;background:linear-gradient(90deg, transparent, #b06a1f 20%, #f5c95c 50%, #b06a1f 80%, transparent);box-shadow:0 0 18px 2px rgba(245,201,92,.45)"></div>
         </section>
 
@@ -221,7 +226,7 @@ class Component extends DCLogic {
       hint:'BOSING — OLDINGA · SURING — ATROFGA QARANG',
       heroSubA:'Qora temirni bolgʻalab, oltin quyamiz. ',heroSubC:' — oʻyin va texnologiya sarhadida mahsulot tavlaydigan ishlab chiqish studiyasi: oʻyin ishlab chiqish va Web3 tizimlari.',
       heroBadge:'Rasmiy rezident kompaniya',
-      prodCatch:'Ilk asarimiz temirxonada tavlanmoqda',prodName:'TITLE 01 — Tez orada',
+      prodVisit:'RASMIY SAYT',prodCatch:'Ilk asarimiz temirxonada tavlanmoqda',prodName:'TITLE 01 — BLAZECROWN',
       prodDesc:'Blackforgeʼning ilk taytli hozir ishlab chiqilmoqda — ikki oʻchoqda tavlangan tajriba: oʻyinlar va Web3.',
       gameH:'Oʻyin ishlab chiqish',gameP:'Gʻoyadan reliz va jonli qoʻllab-quvvatlashgacha. Oʻyinchilar yodida qoladigan tajribalarni geymdizayn va muhandislikni birlashtirib yaratamiz.',
       gameL1:'Konsol / mobil / PK taytllarini ishlab chiqish',gameL2:'Geymdizayn va level-dizayn',gameL3:'Unity / Unreal Engineʼda buyurtma va hamkorlikdagi ishlab chiqish',gameL4:'Jonli qoʻllab-quvvatlash (LiveOps)',
@@ -244,7 +249,7 @@ class Component extends DCLogic {
       hint:'クリックで進む ・ ドラッグで見回す',
       heroSubA:'黒鉄を打ち、金を鋳る。',heroSubC:' は、ゲーム開発と Web3 システム開発を軸に、遊びと技術の最前線でプロダクトを鍛え上げる開発スタジオです。',
       heroBadge:'公式レジデント企業',
-      prodCatch:'鍛冶場では、第一作を鍛造中',prodName:'TITLE 01 — 近日公開',
+      prodVisit:'公式サイト',prodCatch:'鍛冶場では、第一作を鍛造中',prodName:'TITLE 01 — BLAZECROWN',
       prodDesc:'Blackforge初のタイトルを現在開発中です。ゲームとWeb3、二つの炉で鍛えた体験を、まもなくお届けします。',
       gameH:'ゲーム開発',gameP:'企画からリリース、運用まで。プレイヤーの記憶に残る体験を、コンセプト設計とエンジニアリングの両輪でつくります。',
       gameL1:'コンシューマ / モバイル / PC タイトル開発',gameL2:'ゲームデザイン・レベルデザイン',gameL3:'Unity / Unreal Engine による受託・共同開発',gameL4:'ライブ運用・LiveOps 支援',
@@ -267,7 +272,7 @@ class Component extends DCLogic {
       hint:'CLICK TO ADVANCE · DRAG TO LOOK',
       heroSubA:'Striking black iron, casting gold. ',heroSubC:' is a development studio forging products at the frontier of play and technology — game development and Web3 systems.',
       heroBadge:'Official Resident Company',
-      prodCatch:'Our first title is in the forge',prodName:'TITLE 01 — Coming Soon',
+      prodVisit:'OFFICIAL SITE',prodCatch:'Our first title is in the forge',prodName:'TITLE 01 — BLAZECROWN',
       prodDesc:'Blackforge\u2019s first title is now in development — an experience forged in two furnaces: games and Web3.',
       gameH:'Game Development',gameP:'From concept to launch and live operations. We craft experiences players remember, combining game design and engineering.',
       gameL1:'Console / mobile / PC title development',gameL2:'Game design & level design',gameL3:'Contract & co-development with Unity / Unreal Engine',gameL4:'Live operations (LiveOps) support',
@@ -290,7 +295,7 @@ class Component extends DCLogic {
       hint:'КЛИК — ДАЛЕЕ · ТЯНИ — ОСМОТРЕТЬСЯ',
       heroSubA:'Куём чёрное железо, отливаем золото. ',heroSubC:' — студия разработки, закаляющая продукты на переднем крае игр и технологий: геймдев и Web3-системы.',
       heroBadge:'Официальный резидент',
-      prodCatch:'Наш первый тайтл куётся в кузнице',prodName:'TITLE 01 — скоро',
+      prodVisit:'ОФИЦИАЛЬНЫЙ САЙТ',prodCatch:'Наш первый тайтл куётся в кузнице',prodName:'TITLE 01 — BLAZECROWN',
       prodDesc:'Первый тайтл Blackforge уже в разработке — опыт, закалённый в двух горнах: играх и Web3.',
       gameH:'Разработка игр',gameP:'От концепта до релиза и живой эксплуатации. Мы создаём впечатления, которые игроки запоминают, соединяя геймдизайн и инженерию.',
       gameL1:'Разработка тайтлов: консоли / мобильные / ПК',gameL2:'Геймдизайн и левел-дизайн',gameL3:'Заказная и совместная разработка на Unity / Unreal Engine',gameL4:'Поддержка живой эксплуатации (LiveOps)',
