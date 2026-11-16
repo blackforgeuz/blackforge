@@ -1,8 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="uz">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blackforge | Game Development × Web3 Systems — Tashkent</title>
+<meta name="description" content="Blackforge is a development studio in Tashkent, Uzbekistan, building games and Web3 systems. IT Park Uzbekistan resident company. ゲーム開発・Web3システム開発のBlackforge（ウズベキスタン・タシケント）。">
+<link rel="canonical" href="https://blackforge.uz/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Blackforge">
+<meta property="og:url" content="https://blackforge.uz/">
+<meta property="og:title" content="Blackforge | Game Development × Web3 Systems">
+<meta property="og:description" content="Development studio in Tashkent, Uzbekistan, building games and Web3 systems.">
+<meta name="twitter:card" content="summary">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -518,7 +527,7 @@ class Component extends DCLogic {
   }
 
   gameDoc() {
-    const B = new URL('SkyHopperWeb00/SkyHopperWeb00/', document.baseURI).href;
+    const B = new URL('SkyHopperWeb00/', document.baseURI).href;
     const S = '<' + '/script>';
     return '<!DOCTYPE html><html><head><meta charset="utf-8">' +
       '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">' +
@@ -773,7 +782,7 @@ class Component extends DCLogic {
     if (instant) { Object.assign(this.cam, this.tgt); }
   }
 
-  setLang(c) { this.setState({ lang: c }); document.title = this.D[c].title; }
+  setLang(c) { this.setState({ lang: c }); document.title = this.D[c].title; document.documentElement.lang = c; }
 
   enter() {
     if (this.state.entered) return;
