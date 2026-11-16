@@ -23,7 +23,8 @@
   @keyframes enterPulse{0%,100%{box-shadow:0 0 0 0 rgba(245,201,92,.25)}50%{box-shadow:0 0 30px 4px rgba(245,201,92,.25)}}
   .bf-scroll::-webkit-scrollbar{width:4px}
   .bf-scroll::-webkit-scrollbar-thumb{background:rgba(212,164,55,.4)}
-  @media (max-width:900px){.bf-navlinks{display:none!important}.bf-rail{display:none!important}}
+  @media (max-width:1260px){.bf-navlinks{display:none!important}}
+  @media (max-width:900px){.bf-rail{display:none!important}}
   @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important}}
 </style>
 </helmet>
@@ -44,6 +45,9 @@
         <div id="bf-mq2" data-mqy="-320" style="position:absolute;left:0;top:0;visibility:hidden;pointer-events:none;white-space:nowrap;overflow:visible">
           <div style="display:inline-block;white-space:nowrap;animation:mq 52s linear infinite reverse;font-family:'Bebas Neue','Oswald',sans-serif;font-size:120px;letter-spacing:.12em;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(212,164,55,.26)">FORGED IN TASHKENT — EST. 2026 — FORGED IN TASHKENT — EST. 2026 — FORGED IN TASHKENT — EST. 2026 — FORGED IN TASHKENT — EST. 2026 — </div>
         </div>
+        <div id="bf-mq3" data-mqy="-460" style="position:absolute;left:0;top:0;visibility:hidden;pointer-events:none;white-space:nowrap;overflow:visible">
+          <div style="display:inline-block;white-space:nowrap;animation:mq 50s linear infinite reverse;font-family:'Bebas Neue','Oswald',sans-serif;font-size:120px;letter-spacing:.12em;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(245,201,92,.34)">{{ mqBlaze }}</div>
+        </div>
         <div id="bf-decor" style="position:absolute;left:0;top:0;transform-style:preserve-3d;pointer-events:none"></div>
 
         <section data-station="0" data-screen-label="HOME" style="position:absolute;left:0;top:0;width:min(88vw,1080px);transform-style:preserve-3d;visibility:hidden">
@@ -59,10 +63,10 @@
           </div>
         </section>
 
-        <section data-station="3" data-screen-label="PRODUCTS" style="position:absolute;left:0;top:0;width:min(78vw,900px);height:min(66vh,580px);visibility:hidden;border:1px solid rgba(212,164,55,.35);background:radial-gradient(ellipse 80% 60% at 50% 112%, rgba(176,106,31,.16), transparent 60%), rgba(16,13,10,.97)">
+        <section data-station="1" data-screen-label="PRODUCTS" style="position:absolute;left:0;top:0;width:min(78vw,900px);height:min(66vh,580px);visibility:hidden;border:1px solid rgba(212,164,55,.35);background:radial-gradient(ellipse 80% 60% at 50% 112%, rgba(176,106,31,.16), transparent 60%), rgba(16,13,10,.97)">
           <div style="position:absolute;top:-1px;left:-1px;width:14px;height:14px;border-top:2px solid #d4a437;border-left:2px solid #d4a437;z-index:3"></div>
           <div style="position:absolute;bottom:-1px;right:-1px;width:14px;height:14px;border-bottom:2px solid #d4a437;border-right:2px solid #d4a437;z-index:3"></div>
-          <div style="position:absolute;top:0;left:0;right:0;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:.95em 1.6em;border-bottom:1px solid rgba(212,164,55,.2);background:rgba(10,9,8,.82);font-family:'Bebas Neue','Oswald',sans-serif;font-size:.8rem;letter-spacing:.3em;color:#d4a437"><span>{{ t.nav3 }}</span><span style="color:#8a8177">04 / 06</span></div>
+          <div style="position:absolute;top:0;left:0;right:0;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:.95em 1.6em;border-bottom:1px solid rgba(212,164,55,.2);background:rgba(10,9,8,.82);font-family:'Bebas Neue','Oswald',sans-serif;font-size:.8rem;letter-spacing:.3em;color:#d4a437"><span>{{ t.nav1 }}</span><span style="color:#8a8177">02 / 07</span></div>
           <div class="bf-scroll" style="position:absolute;inset:0;padding:4.4em 2.6em 2.2em;overflow-y:auto;overscroll-behavior:contain;touch-action:pan-y;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:rgba(212,164,55,.4) transparent">
             <p style="margin:0 0 .8em;color:#d4a437;letter-spacing:.2em;font-size:.8rem">{{ t.prodCatch }}</p>
             <h3 style="margin:0 0 .8em;font-family:'Shippori Mincho',serif;font-weight:600;font-size:1.5rem;color:#e9e2d4">{{ t.prodName }}</h3>
@@ -83,10 +87,30 @@
           <div style="position:absolute;left:0;right:0;bottom:0;height:2px;z-index:2;background:linear-gradient(90deg, transparent, #b06a1f 20%, #f5c95c 50%, #b06a1f 80%, transparent);box-shadow:0 0 18px 2px rgba(245,201,92,.45)"></div>
         </section>
 
-        <section data-station="2" data-screen-label="SERVICES" style="position:absolute;left:0;top:0;width:min(78vw,900px);height:min(66vh,580px);visibility:hidden;border:1px solid rgba(212,164,55,.35);background:radial-gradient(ellipse 80% 60% at 50% 112%, rgba(176,106,31,.16), transparent 60%), rgba(16,13,10,.97)">
+        <section data-station="2" data-screen-label="TRAINING" style="position:absolute;left:0;top:0;width:min(78vw,900px);height:min(66vh,580px);visibility:hidden;border:1px solid rgba(212,164,55,.35);background:radial-gradient(ellipse 80% 60% at 50% 112%, rgba(176,106,31,.16), transparent 60%), rgba(16,13,10,.97)">
           <div style="position:absolute;top:-1px;left:-1px;width:14px;height:14px;border-top:2px solid #d4a437;border-left:2px solid #d4a437;z-index:3"></div>
           <div style="position:absolute;bottom:-1px;right:-1px;width:14px;height:14px;border-bottom:2px solid #d4a437;border-right:2px solid #d4a437;z-index:3"></div>
-          <div style="position:absolute;top:0;left:0;right:0;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:.95em 1.6em;border-bottom:1px solid rgba(212,164,55,.2);background:rgba(10,9,8,.82);font-family:'Bebas Neue','Oswald',sans-serif;font-size:.8rem;letter-spacing:.3em;color:#d4a437"><span>{{ t.nav2 }}</span><span style="color:#8a8177">03 / 06</span></div>
+          <div style="position:absolute;top:0;left:0;right:0;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:.95em 1.6em;border-bottom:1px solid rgba(212,164,55,.2);background:rgba(10,9,8,.82);font-family:'Bebas Neue','Oswald',sans-serif;font-size:.8rem;letter-spacing:.3em;color:#d4a437"><span>{{ t.nav2 }}</span><span style="color:#8a8177">03 / 07</span></div>
+          <div class="bf-scroll" style="position:absolute;inset:0;padding:4.4em 2.6em 2.2em;overflow-y:auto;overscroll-behavior:contain;touch-action:pan-y;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:rgba(212,164,55,.4) transparent">
+            <p style="margin:0 0 .8em;color:#d4a437;letter-spacing:.2em;font-size:.8rem">{{ t.trCatch }}</p>
+            <h3 style="margin:0 0 .8em;font-family:'Shippori Mincho',serif;font-weight:600;font-size:1.5rem;color:#e9e2d4">TRAINING 01 — SKY HOPPER</h3>
+            <button type="button" onClick="{{ openGame }}" aria-label="Sky Hopper — PLAY" style="appearance:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.2em;width:100%;aspect-ratio:16/9;margin:1.6em 0;padding:0;cursor:pointer;font:inherit;color:inherit;border:1px solid rgba(212,164,55,.35);background:radial-gradient(ellipse 60% 90% at 50% 115%, rgba(176,106,31,.28), transparent 65%), #1e1a15;transition:border-color .3s, box-shadow .3s" style-hover="border-color:#f5c95c;box-shadow:inset 0 0 70px rgba(245,201,92,.08)">
+              <span style="font-family:'Bebas Neue','Oswald',sans-serif;font-size:clamp(1.8rem,3.6vw,3rem);letter-spacing:.14em;line-height:1;color:#f5c95c">SKY HOPPER</span>
+              <span style="display:flex;align-items:center;gap:.8em;padding:.75em 1.9em .65em;background:linear-gradient(120deg,#d4a437,#f5c95c,#d4a437);font-family:'Bebas Neue','Oswald',sans-serif;font-size:.95rem;letter-spacing:.25em;color:#0a0908"><span style="width:0;height:0;border-left:9px solid #0a0908;border-top:6px solid transparent;border-bottom:6px solid transparent"></span>{{ t.trPlay }}</span>
+              <span style="font-size:.66rem;letter-spacing:.3em;color:#8a8177">MADE WITH UNITY</span>
+            </button>
+            <p style="margin:0;color:#8a8177;font-size:.92rem">{{ t.trDesc }}</p>
+            <div style="display:flex;gap:.9em;margin-top:1.6em;flex-wrap:wrap">
+              <a href="./SkyHopperWeb00/index.html" target="_blank" rel="noopener" style="border:1px solid #d4a437;padding:.7em 1.4em;color:#f5c95c;text-decoration:none;font-family:'Bebas Neue','Oswald',sans-serif;letter-spacing:.18em;font-size:.95rem;display:flex;align-items:center;gap:.6em" style-hover="background:rgba(212,164,55,.12)">{{ t.trTab }} ↗</a>
+            </div>
+          </div>
+          <div style="position:absolute;left:0;right:0;bottom:0;height:2px;z-index:2;background:linear-gradient(90deg, transparent, #b06a1f 20%, #f5c95c 50%, #b06a1f 80%, transparent);box-shadow:0 0 18px 2px rgba(245,201,92,.45)"></div>
+        </section>
+
+        <section data-station="4" data-screen-label="SERVICES" style="position:absolute;left:0;top:0;width:min(78vw,900px);height:min(66vh,580px);visibility:hidden;border:1px solid rgba(212,164,55,.35);background:radial-gradient(ellipse 80% 60% at 50% 112%, rgba(176,106,31,.16), transparent 60%), rgba(16,13,10,.97)">
+          <div style="position:absolute;top:-1px;left:-1px;width:14px;height:14px;border-top:2px solid #d4a437;border-left:2px solid #d4a437;z-index:3"></div>
+          <div style="position:absolute;bottom:-1px;right:-1px;width:14px;height:14px;border-bottom:2px solid #d4a437;border-right:2px solid #d4a437;z-index:3"></div>
+          <div style="position:absolute;top:0;left:0;right:0;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:.95em 1.6em;border-bottom:1px solid rgba(212,164,55,.2);background:rgba(10,9,8,.82);font-family:'Bebas Neue','Oswald',sans-serif;font-size:.8rem;letter-spacing:.3em;color:#d4a437"><span>{{ t.nav4 }}</span><span style="color:#8a8177">05 / 07</span></div>
           <div class="bf-scroll" style="position:absolute;inset:0;padding:4.4em 2.6em 2.2em;overflow-y:auto;overscroll-behavior:contain;touch-action:pan-y;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:rgba(212,164,55,.4) transparent">
             <article style="border:1px solid rgba(212,164,55,.2);background:rgba(20,17,14,.6);padding:1.6em 1.8em;margin-bottom:1.2em">
               <span style="font-family:'Bebas Neue','Oswald',sans-serif;font-size:.72rem;letter-spacing:.3em;color:#d4a437;display:block;margin-bottom:.8em">GAME DEV</span>
@@ -114,10 +138,10 @@
           <div style="position:absolute;left:0;right:0;bottom:0;height:2px;z-index:2;background:linear-gradient(90deg, transparent, #b06a1f 20%, #f5c95c 50%, #b06a1f 80%, transparent);box-shadow:0 0 18px 2px rgba(245,201,92,.45)"></div>
         </section>
 
-        <section data-station="1" data-screen-label="COMPANY" style="position:absolute;left:0;top:0;width:min(78vw,900px);height:min(66vh,580px);visibility:hidden;border:1px solid rgba(212,164,55,.35);background:radial-gradient(ellipse 80% 60% at 50% 112%, rgba(176,106,31,.16), transparent 60%), rgba(16,13,10,.97)">
+        <section data-station="3" data-screen-label="COMPANY" style="position:absolute;left:0;top:0;width:min(78vw,900px);height:min(66vh,580px);visibility:hidden;border:1px solid rgba(212,164,55,.35);background:radial-gradient(ellipse 80% 60% at 50% 112%, rgba(176,106,31,.16), transparent 60%), rgba(16,13,10,.97)">
           <div style="position:absolute;top:-1px;left:-1px;width:14px;height:14px;border-top:2px solid #d4a437;border-left:2px solid #d4a437;z-index:3"></div>
           <div style="position:absolute;bottom:-1px;right:-1px;width:14px;height:14px;border-bottom:2px solid #d4a437;border-right:2px solid #d4a437;z-index:3"></div>
-          <div style="position:absolute;top:0;left:0;right:0;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:.95em 1.6em;border-bottom:1px solid rgba(212,164,55,.2);background:rgba(10,9,8,.82);font-family:'Bebas Neue','Oswald',sans-serif;font-size:.8rem;letter-spacing:.3em;color:#d4a437"><span>{{ t.nav1 }}</span><span style="color:#8a8177">02 / 06</span></div>
+          <div style="position:absolute;top:0;left:0;right:0;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:.95em 1.6em;border-bottom:1px solid rgba(212,164,55,.2);background:rgba(10,9,8,.82);font-family:'Bebas Neue','Oswald',sans-serif;font-size:.8rem;letter-spacing:.3em;color:#d4a437"><span>{{ t.nav3 }}</span><span style="color:#8a8177">04 / 07</span></div>
           <div class="bf-scroll" style="position:absolute;inset:0;padding:4.4em 2.6em 2.2em;overflow-y:auto;overscroll-behavior:contain;touch-action:pan-y;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:rgba(212,164,55,.4) transparent">
             <p style="margin:0 0 1em;font-family:'Shippori Mincho',serif;font-size:1.15rem;color:#e9e2d4;line-height:2;font-weight:500">{{ t.leadA }}<br>{{ t.leadB }}</p>
             <p style="margin:0 0 1.2em;color:#8a8177;font-size:.92rem">{{ t.p1a }}<strong style="color:#e9e2d4;font-weight:400">{{ t.p1s }}</strong>{{ t.p1b }}</p>
@@ -133,10 +157,10 @@
           <div style="position:absolute;left:0;right:0;bottom:0;height:2px;z-index:2;background:linear-gradient(90deg, transparent, #b06a1f 20%, #f5c95c 50%, #b06a1f 80%, transparent);box-shadow:0 0 18px 2px rgba(245,201,92,.45)"></div>
         </section>
 
-        <section data-station="4" data-screen-label="ACCESS" style="position:absolute;left:0;top:0;width:min(78vw,900px);height:min(66vh,580px);visibility:hidden;border:1px solid rgba(212,164,55,.35);background:radial-gradient(ellipse 80% 60% at 50% 112%, rgba(176,106,31,.16), transparent 60%), rgba(16,13,10,.97)">
+        <section data-station="5" data-screen-label="ACCESS" style="position:absolute;left:0;top:0;width:min(78vw,900px);height:min(66vh,580px);visibility:hidden;border:1px solid rgba(212,164,55,.35);background:radial-gradient(ellipse 80% 60% at 50% 112%, rgba(176,106,31,.16), transparent 60%), rgba(16,13,10,.97)">
           <div style="position:absolute;top:-1px;left:-1px;width:14px;height:14px;border-top:2px solid #d4a437;border-left:2px solid #d4a437;z-index:3"></div>
           <div style="position:absolute;bottom:-1px;right:-1px;width:14px;height:14px;border-bottom:2px solid #d4a437;border-right:2px solid #d4a437;z-index:3"></div>
-          <div style="position:absolute;top:0;left:0;right:0;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:.95em 1.6em;border-bottom:1px solid rgba(212,164,55,.2);background:rgba(10,9,8,.82);font-family:'Bebas Neue','Oswald',sans-serif;font-size:.8rem;letter-spacing:.3em;color:#d4a437"><span>{{ t.nav4 }}</span><span style="color:#8a8177">05 / 06</span></div>
+          <div style="position:absolute;top:0;left:0;right:0;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:.95em 1.6em;border-bottom:1px solid rgba(212,164,55,.2);background:rgba(10,9,8,.82);font-family:'Bebas Neue','Oswald',sans-serif;font-size:.8rem;letter-spacing:.3em;color:#d4a437"><span>{{ t.nav5 }}</span><span style="color:#8a8177">06 / 07</span></div>
           <div class="bf-scroll" style="position:absolute;inset:0;padding:4.4em 2.6em 2.2em;overflow-y:auto;overscroll-behavior:contain;touch-action:pan-y;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:rgba(212,164,55,.4) transparent">
             <dl style="margin:0">
               <div style="padding:.8em 0;border-bottom:1px solid rgba(212,164,55,.15)"><dt style="color:#d4a437;font-size:.72rem;letter-spacing:.25em;font-family:'Bebas Neue','Oswald',sans-serif;margin-bottom:.2em">{{ t.accAK }}</dt><dd style="margin:0;color:#e9e2d4;font-size:.88rem">{{ t.accAV }}</dd></div>
@@ -152,10 +176,10 @@
           <div style="position:absolute;left:0;right:0;bottom:0;height:2px;z-index:2;background:linear-gradient(90deg, transparent, #b06a1f 20%, #f5c95c 50%, #b06a1f 80%, transparent);box-shadow:0 0 18px 2px rgba(245,201,92,.45)"></div>
         </section>
 
-        <section data-station="5" data-screen-label="CONTACT" style="position:absolute;left:0;top:0;width:min(78vw,900px);height:min(66vh,580px);visibility:hidden;border:1px solid rgba(212,164,55,.35);background:radial-gradient(ellipse 80% 60% at 50% 112%, rgba(176,106,31,.16), transparent 60%), rgba(16,13,10,.97)">
+        <section data-station="6" data-screen-label="CONTACT" style="position:absolute;left:0;top:0;width:min(78vw,900px);height:min(66vh,580px);visibility:hidden;border:1px solid rgba(212,164,55,.35);background:radial-gradient(ellipse 80% 60% at 50% 112%, rgba(176,106,31,.16), transparent 60%), rgba(16,13,10,.97)">
           <div style="position:absolute;top:-1px;left:-1px;width:14px;height:14px;border-top:2px solid #d4a437;border-left:2px solid #d4a437;z-index:3"></div>
           <div style="position:absolute;bottom:-1px;right:-1px;width:14px;height:14px;border-bottom:2px solid #d4a437;border-right:2px solid #d4a437;z-index:3"></div>
-          <div style="position:absolute;top:0;left:0;right:0;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:.95em 1.6em;border-bottom:1px solid rgba(212,164,55,.2);background:rgba(10,9,8,.82);font-family:'Bebas Neue','Oswald',sans-serif;font-size:.8rem;letter-spacing:.3em;color:#d4a437"><span>{{ t.nav5 }}</span><span style="color:#8a8177">06 / 06</span></div>
+          <div style="position:absolute;top:0;left:0;right:0;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:.95em 1.6em;border-bottom:1px solid rgba(212,164,55,.2);background:rgba(10,9,8,.82);font-family:'Bebas Neue','Oswald',sans-serif;font-size:.8rem;letter-spacing:.3em;color:#d4a437"><span>{{ t.nav6 }}</span><span style="color:#8a8177">07 / 07</span></div>
           <div class="bf-scroll" style="position:absolute;inset:0;padding:4.4em 2.6em 2.2em;overflow-y:auto;overscroll-behavior:contain;touch-action:pan-y;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:rgba(212,164,55,.4) transparent;display:flex;flex-direction:column;align-items:center;text-align:center"><div style="margin:auto;display:flex;flex-direction:column;align-items:center">
             <p style="margin:0 0 1.8em;font-family:'Shippori Mincho',serif;font-size:1.15rem;color:#e9e2d4;max-width:26em;font-weight:500">{{ t.invA }}<br>{{ t.invB }}</p>
             <p style="margin:0 0 2em;color:#8a8177;font-size:.9rem">MAIL&nbsp;&nbsp;<a href="mailto:blackforge@blackforge.uz" style="color:#f5c95c;text-decoration:none;border-bottom:1px solid rgba(245,201,92,.35)">blackforge@blackforge.uz</a><br>TEL&nbsp;&nbsp;<a href="tel:+998920239253" style="color:#f5c95c;text-decoration:none;border-bottom:1px solid rgba(245,201,92,.35)">+998 920 239 253</a><span>{{ t.cHours }}</span></p>
@@ -179,8 +203,8 @@
       </div>
       <a onClick="{{ goHome }}" style="font-family:'Bebas Neue','Oswald',sans-serif;font-size:1.5rem;letter-spacing:.22em;color:#e9e2d4;text-decoration:none;display:flex;align-items:center;gap:.6em;white-space:nowrap;cursor:pointer"><span style="width:9px;height:9px;transform:rotate(45deg);background:linear-gradient(135deg,#f5c95c,#b06a1f);box-shadow:0 0 12px rgba(245,201,92,.7);flex:none"></span>BLACKFORGE</a>
     </div>
-    <ul class="bf-navlinks" style="display:flex;gap:2.4em;list-style:none;margin:0;padding:0;pointer-events:auto">
-      <sc-for list="{{ navItems }}" as="it" hint-placeholder-count="6">
+    <ul class="bf-navlinks" style="display:flex;gap:1.4em;list-style:none;margin:0;padding:0;pointer-events:auto">
+      <sc-for list="{{ navItems }}" as="it" hint-placeholder-count="7">
         <li><a onClick="{{ it.onClick }}" style="{{ it.style }}">{{ it.label }}</a></li>
       </sc-for>
     </ul>
@@ -189,7 +213,7 @@
   <div class="bf-rail" style="position:fixed;right:26px;top:50%;transform:translateY(-50%);height:min(320px,42vh);z-index:100;display:flex;flex-direction:column;justify-content:space-between;align-items:center">
     <div style="position:absolute;top:0;bottom:0;left:50%;width:1px;background:rgba(212,164,55,.25)"></div>
     <div id="bf-marker" style="position:absolute;left:50%;top:0;width:11px;height:11px;margin:-5px 0 0 -5.5px;transform:rotate(45deg);background:linear-gradient(135deg,#f5c95c,#b06a1f);box-shadow:0 0 14px rgba(245,201,92,.8);pointer-events:none;transition:top .2s ease-out"></div>
-    <sc-for list="{{ railDots }}" as="d" hint-placeholder-count="6">
+    <sc-for list="{{ railDots }}" as="d" hint-placeholder-count="7">
       <button type="button" aria-label="{{ d.label }}" onClick="{{ d.onClick }}" style="appearance:none;border:0;background:transparent;cursor:pointer;padding:6px;position:relative;z-index:1;display:flex"><i style="{{ d.style }}"></i></button>
     </sc-for>
   </div>
@@ -197,8 +221,26 @@
   <div style="position:fixed;left:0;right:0;bottom:0;z-index:100;display:flex;align-items:flex-end;justify-content:space-between;padding:24px 4vw;pointer-events:none">
     <div style="width:1px"></div>
     <div id="bf-hint" style="font-size:.7rem;letter-spacing:.35em;color:#8a8177;display:flex;align-items:center;gap:1em;animation:hintPulse 2.4s ease-in-out infinite;transition:opacity .8s"><span style="font-family:'Bebas Neue','Oswald',sans-serif;color:#d4a437;letter-spacing:.1em">✥</span><span>{{ t.hint }}</span></div>
-    <div style="font-family:'Bebas Neue','Oswald',sans-serif;letter-spacing:.25em;color:#8a8177;font-size:.8rem;display:flex;align-items:baseline;gap:1em"><span style="color:#f5c95c;font-size:1.6rem;letter-spacing:.15em">{{ stNum }}</span><span>/ 06</span><span style="color:#e9e2d4">{{ stName }}</span></div>
+    <div style="font-family:'Bebas Neue','Oswald',sans-serif;letter-spacing:.25em;color:#8a8177;font-size:.8rem;display:flex;align-items:baseline;gap:1em"><span style="color:#f5c95c;font-size:1.6rem;letter-spacing:.15em">{{ stNum }}</span><span>/ 07</span><span style="color:#e9e2d4">{{ stName }}</span></div>
   </div>
+
+  <sc-if value="{{ gameOn }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ backdropClose }}" style="position:fixed;inset:0;z-index:260;display:flex;align-items:center;justify-content:center;padding:clamp(14px,3vw,40px);background:rgba(10,9,8,.93)">
+      <div role="dialog" aria-label="Sky Hopper" style="position:relative;width:min(100%, calc((100vh - 150px) * 1.6), 1180px);border:1px solid rgba(212,164,55,.45);background:#0a0908;box-shadow:0 0 80px rgba(176,106,31,.22)">
+        <div style="position:absolute;top:-1px;left:-1px;width:14px;height:14px;border-top:2px solid #d4a437;border-left:2px solid #d4a437;z-index:3;pointer-events:none"></div>
+        <div style="position:absolute;bottom:-1px;right:-1px;width:14px;height:14px;border-bottom:2px solid #d4a437;border-right:2px solid #d4a437;z-index:3;pointer-events:none"></div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:1em;padding:.75em 1em .75em 1.6em;border-bottom:1px solid rgba(212,164,55,.2);font-family:'Bebas Neue','Oswald',sans-serif;font-size:.8rem;letter-spacing:.3em;color:#d4a437">
+          <span style="display:flex;align-items:center;gap:.8em;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis"><span style="width:7px;height:7px;transform:rotate(45deg);background:linear-gradient(135deg,#f5c95c,#b06a1f);flex:none"></span>TRAINING 01 — SKY HOPPER</span>
+          <div style="display:flex;align-items:center;gap:1.4em;flex:none">
+            <a href="./SkyHopperWeb00/index.html" target="_blank" rel="noopener" style="color:#8a8177;text-decoration:none;font-family:'Noto Sans JP',sans-serif;font-size:.72rem;letter-spacing:.15em;white-space:nowrap" style-hover="color:#f5c95c">{{ t.trTab }} ↗</a>
+            <button type="button" onClick="{{ closeGame }}" style="appearance:none;background:transparent;border:1px solid rgba(212,164,55,.45);cursor:pointer;color:#f5c95c;font-family:'Bebas Neue','Oswald',sans-serif;font-size:.8rem;letter-spacing:.25em;padding:.5em 1em .4em;display:flex;align-items:center;gap:.6em;white-space:nowrap" style-hover="background:rgba(212,164,55,.12)">✕ {{ t.trClose }}</button>
+          </div>
+        </div>
+        <div id="bf-game-host" style="position:relative;width:100%;aspect-ratio:16/10;background:#0a0908"></div>
+        <div style="position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg, transparent, #b06a1f 20%, #f5c95c 50%, #b06a1f 80%, transparent);box-shadow:0 0 18px 2px rgba(245,201,92,.45);pointer-events:none"></div>
+      </div>
+    </div>
+  </sc-if>
 
   <div id="bf-gate" style="position:fixed;inset:0;z-index:300;background:#0a0908;display:flex;align-items:center;justify-content:center;overflow:hidden;transition:opacity .9s ease .1s">
     <div id="bf-code" aria-hidden="true" style="position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none;opacity:.6;transform:perspective(1400px) rotateX(6deg);transform-origin:0% 45%;-webkit-mask-image:linear-gradient(to bottom, transparent, #000 16%, #000 84%, transparent);mask-image:linear-gradient(to bottom, transparent, #000 16%, #000 84%, transparent)"></div>
@@ -218,16 +260,16 @@
   &quot;embers&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Atmosphere&quot;}
 }">
 class Component extends DCLogic {
-  state = { lang: 'uz', idx: 0, entered: false, mapOn: false };
+  state = { lang: 'uz', idx: 0, entered: false, mapOn: false, gameOn: false };
 
   D = {
     uz: {
-      nav0:'BOSH SAHIFA',nav1:'KOMPANIYA',nav2:'YOʻNALISHLAR',nav3:'MAHSULOTLAR',nav4:'MANZIL',nav5:'ALOQA',
+      nav0:'BOSH SAHIFA',nav1:'MAHSULOTLAR',nav2:'TAʼLIM',nav3:'KOMPANIYA',nav4:'YOʻNALISHLAR',nav5:'MANZIL',nav6:'ALOQA',
       hint:'BOSING — OLDINGA · SURING — ATROFGA QARANG',
       heroSubA:'Qora temirni bolgʻalab, oltin quyamiz. ',heroSubC:' — oʻyin va texnologiya sarhadida mahsulot tavlaydigan ishlab chiqish studiyasi: oʻyin ishlab chiqish va Web3 tizimlari.',
       heroBadge:'Rasmiy rezident kompaniya',
-      prodVisit:'RASMIY SAYT',prodCatch:'Ilk asarimiz temirxonada tavlanmoqda',prodName:'TITLE 01 — BLAZECROWN',
-      prodDesc:'Blackforgeʼning ilk taytli hozir ishlab chiqilmoqda — ikki oʻchoqda tavlangan tajriba: oʻyinlar va Web3.',
+      mqBlaze:'BLAZECROWN — BUYURTMA ASOSIDA ISHLAB CHIQILMOQDA — ',prodVisit:'RASMIY SAYT',prodCatch:'Ilk asarimiz temirxonada tavlanmoqda',prodName:'TITLE 01 — BLAZECROWN',
+      prodDesc:'Oson boshqaruv va qizgʻin psixologik bellashuvli yangi turdagi real vaqt jang oʻyini. Shahringizni rivojlantirib jamoangizni kuchaytiring va uch birlik bilan raqibingizni oʻylab yengting. Blackforge buyurtma asosida ishlab chiqmoqda. iOS / Android, bepul.',
       gameH:'Oʻyin ishlab chiqish',gameP:'Gʻoyadan reliz va jonli qoʻllab-quvvatlashgacha. Oʻyinchilar yodida qoladigan tajribalarni geymdizayn va muhandislikni birlashtirib yaratamiz.',
       gameL1:'Konsol / mobil / PK taytllarini ishlab chiqish',gameL2:'Geymdizayn va level-dizayn',gameL3:'Unity / Unreal Engineʼda buyurtma va hamkorlikdagi ishlab chiqish',gameL4:'Jonli qoʻllab-quvvatlash (LiveOps)',
       webH:'Web3 tizimlarini ishlab chiqish',webP:'Toʻliq sikl: smart-kontraktlardan frontendgacha. Markazlashmagan texnologiyalarni odamlar chindan foydalanadigan mahsulotga aylantiramiz.',
@@ -242,15 +284,17 @@ class Component extends DCLogic {
       accSK:'YAQIN BEKAT',accSV:'“Oybek” metro bekatidan 5 daqiqa piyoda',accHK:'ISH VAQTI',accHV:'Ish kunlari 9:00–18:00',
       invA:'Loyihani muhokama qilish, hamkorlik taklif etish yoki ishga joylashish —',invB:'biz bilan bogʻlaning.',
       cHours:' (ish kunlari 9:00–18:00)',cta:'BOGʻLANISH',retTop:'BOSHIGA QAYTISH',
+      trCatch:'Oʻquv temirxonasidan — osmonga',trPlay:'OʻYNASH',trTab:'YANGI OYNADA OCHISH',trClose:'YOPISH',
+      trDesc:'Sky Hopper — xodimimiz ichki oʻquv dasturi doirasida Unityʼda yaratgan brauzer oʻyini. Gʻoyani haqiqatan oʻynasa boʻladigan oʻyingacha yetkazish yoʻlida orttirilgan tajriba buyurtma loyihalarimizda ham, oʻz taytllarimizda ham qoʻl keladi.',
       title:'Blackforge | Oʻyin ishlab chiqish × Web3 tizimlari'
     },
     ja: {
-      nav0:'HOME',nav1:'会社情報',nav2:'事業内容',nav3:'プロダクト',nav4:'アクセス',nav5:'コンタクト',
+      nav0:'HOME',nav1:'プロダクト',nav2:'研修作品',nav3:'会社情報',nav4:'事業内容',nav5:'アクセス',nav6:'コンタクト',
       hint:'クリックで進む ・ ドラッグで見回す',
       heroSubA:'黒鉄を打ち、金を鋳る。',heroSubC:' は、ゲーム開発と Web3 システム開発を軸に、遊びと技術の最前線でプロダクトを鍛え上げる開発スタジオです。',
       heroBadge:'公式レジデント企業',
-      prodVisit:'公式サイト',prodCatch:'鍛冶場では、第一作を鍛造中',prodName:'TITLE 01 — BLAZECROWN',
-      prodDesc:'Blackforge初のタイトルを現在開発中です。ゲームとWeb3、二つの炉で鍛えた体験を、まもなくお届けします。',
+      mqBlaze:'BLAZECROWN — 受託開発中 — ',prodVisit:'公式サイト',prodCatch:'鍛冶場では、第一作を鍛造中',prodName:'TITLE 01 — BLAZECROWN',
+      prodDesc:'お手軽操作で白熱の心理戦が楽しめる、新感覚のリアルタイム対戦ゲーム。街を育てて仲間を強化し、3体のユニットで極限の読み合いに挑みます。開発はBlackforgeが受託。iOS / Android、基本プレイ無料。',
       gameH:'ゲーム開発',gameP:'企画からリリース、運用まで。プレイヤーの記憶に残る体験を、コンセプト設計とエンジニアリングの両輪でつくります。',
       gameL1:'コンシューマ / モバイル / PC タイトル開発',gameL2:'ゲームデザイン・レベルデザイン',gameL3:'Unity / Unreal Engine による受託・共同開発',gameL4:'ライブ運用・LiveOps 支援',
       webH:'Web3システム開発',webP:'スマートコントラクトからフロントエンドまで一気通貫。分散型技術を、実際に使われるプロダクトへ落とし込みます。',
@@ -265,15 +309,17 @@ class Component extends DCLogic {
       accSK:'最寄駅',accSV:'地下鉄「オイベク(Oybek)駅」より徒歩5分',accHK:'営業時間',accHV:'平日 9:00–18:00',
       invA:'開発のご相談、協業のご提案、採用について。',invB:'まずはお気軽にご連絡ください。',
       cHours:'(平日 9:00–18:00)',cta:'GET IN TOUCH',retTop:'最初に戻る',
+      trCatch:'研修の炉から、空へ跳ぶ一作',trPlay:'PLAY',trTab:'新しいタブで遊ぶ',trClose:'閉じる',
+      trDesc:'『Sky Hopper』は、社内研修の一環として社員が Unity で制作したブラウザゲームです。アイデアを形にし、実際に遊べるところまで作り切る。研修で積み重ねたその経験は、クライアントワークにも自社タイトルにも生かされていきます。',
       title:'Blackforge | ゲーム開発 × Web3システム開発'
     },
     en: {
-      nav0:'HOME',nav1:'COMPANY',nav2:'SERVICES',nav3:'PRODUCTS',nav4:'ACCESS',nav5:'CONTACT',
+      nav0:'HOME',nav1:'PRODUCTS',nav2:'TRAINING',nav3:'COMPANY',nav4:'SERVICES',nav5:'ACCESS',nav6:'CONTACT',
       hint:'CLICK TO ADVANCE · DRAG TO LOOK',
       heroSubA:'Striking black iron, casting gold. ',heroSubC:' is a development studio forging products at the frontier of play and technology — game development and Web3 systems.',
       heroBadge:'Official Resident Company',
-      prodVisit:'OFFICIAL SITE',prodCatch:'Our first title is in the forge',prodName:'TITLE 01 — BLAZECROWN',
-      prodDesc:'Blackforge\u2019s first title is now in development — an experience forged in two furnaces: games and Web3.',
+      mqBlaze:'BLAZECROWN — CONTRACT DEVELOPMENT IN PROGRESS — ',prodVisit:'OFFICIAL SITE',prodCatch:'Our first title is in the forge',prodName:'TITLE 01 — BLAZECROWN',
+      prodDesc:'A new kind of real-time battle game with easy controls and intense mind games. Grow your town to power up your crew, then outthink your opponent with a squad of three. Developed under contract by Blackforge. iOS / Android, free to play.',
       gameH:'Game Development',gameP:'From concept to launch and live operations. We craft experiences players remember, combining game design and engineering.',
       gameL1:'Console / mobile / PC title development',gameL2:'Game design & level design',gameL3:'Contract & co-development with Unity / Unreal Engine',gameL4:'Live operations (LiveOps) support',
       webH:'Web3 System Development',webP:'End to end, from smart contracts to front end. We turn decentralized technology into products people actually use.',
@@ -288,15 +334,17 @@ class Component extends DCLogic {
       accSK:'NEAREST STATION',accSV:'5 min walk from Oybek metro station',accHK:'OFFICE HOURS',accHV:'Weekdays 9:00\u201318:00 (UZT)',
       invA:'A project to discuss, a partnership to propose, or a role to apply for —',invB:'we\u2019d love to hear from you.',
       cHours:' (Weekdays 9:00\u201318:00 UZT)',cta:'GET IN TOUCH',retTop:'RETURN TO START',
+      trCatch:'Out of the training forge, into the sky',trPlay:'PLAY',trTab:'OPEN IN NEW TAB',trClose:'CLOSE',
+      trDesc:'Sky Hopper is a browser game built in Unity by a member of our team as part of our in-house training. Taking an idea all the way to something people can actually play builds experience that carries straight into our client work and our own titles.',
       title:'Blackforge | Game Development × Web3 Systems'
     },
     ru: {
-      nav0:'ГЛАВНАЯ',nav1:'О КОМПАНИИ',nav2:'НАПРАВЛЕНИЯ',nav3:'ПРОДУКТЫ',nav4:'КАК ДОБРАТЬСЯ',nav5:'КОНТАКТЫ',
+      nav0:'ГЛАВНАЯ',nav1:'ПРОДУКТЫ',nav2:'ОБУЧЕНИЕ',nav3:'О КОМПАНИИ',nav4:'НАПРАВЛЕНИЯ',nav5:'КАК ДОБРАТЬСЯ',nav6:'КОНТАКТЫ',
       hint:'КЛИК — ДАЛЕЕ · ТЯНИ — ОСМОТРЕТЬСЯ',
       heroSubA:'Куём чёрное железо, отливаем золото. ',heroSubC:' — студия разработки, закаляющая продукты на переднем крае игр и технологий: геймдев и Web3-системы.',
       heroBadge:'Официальный резидент',
-      prodVisit:'ОФИЦИАЛЬНЫЙ САЙТ',prodCatch:'Наш первый тайтл куётся в кузнице',prodName:'TITLE 01 — BLAZECROWN',
-      prodDesc:'Первый тайтл Blackforge уже в разработке — опыт, закалённый в двух горнах: играх и Web3.',
+      mqBlaze:'BLAZECROWN — ИДЁТ ЗАКАЗНАЯ РАЗРАБОТКА — ',prodVisit:'ОФИЦИАЛЬНЫЙ САЙТ',prodCatch:'Наш первый тайтл куётся в кузнице',prodName:'TITLE 01 — BLAZECROWN',
+      prodDesc:'Новая PvP-игра в реальном времени: простое управление и напряжённая психологическая дуэль. Развивайте город, усиливайте команду и переигрывайте соперника отрядом из трёх бойцов. Заказная разработка — Blackforge. iOS / Android, бесплатно.',
       gameH:'Разработка игр',gameP:'От концепта до релиза и живой эксплуатации. Мы создаём впечатления, которые игроки запоминают, соединяя геймдизайн и инженерию.',
       gameL1:'Разработка тайтлов: консоли / мобильные / ПК',gameL2:'Геймдизайн и левел-дизайн',gameL3:'Заказная и совместная разработка на Unity / Unreal Engine',gameL4:'Поддержка живой эксплуатации (LiveOps)',
       webH:'Разработка Web3-систем',webP:'Полный цикл: от смарт-контрактов до фронтенда. Превращаем децентрализованные технологии в продукты, которыми действительно пользуются.',
@@ -311,19 +359,22 @@ class Component extends DCLogic {
       accSK:'БЛИЖАЙШАЯ СТАНЦИЯ',accSV:'5 минут пешком от станции метро «Ойбек»',accHK:'ЧАСЫ РАБОТЫ',accHV:'Будни 9:00–18:00',
       invA:'Обсудить проект, предложить партнёрство или откликнуться на вакансию —',invB:'напишите нам.',
       cHours:' (будни 9:00–18:00)',cta:'НАПИСАТЬ НАМ',retTop:'В НАЧАЛО',
+      trCatch:'Из учебной кузницы — в небо',trPlay:'ИГРАТЬ',trTab:'В НОВОЙ ВКЛАДКЕ',trClose:'ЗАКРЫТЬ',
+      trDesc:'Sky Hopper — браузерная игра, созданная нашим сотрудником на Unity в рамках внутреннего обучения. Путь от идеи до игры, в которую действительно можно сыграть, даёт опыт, который мы применяем и в заказных проектах, и в собственных тайтлах.',
       title:'Blackforge | Разработка игр × Web3-системы'
     }
   };
-  NAMES = ['HOME','COMPANY','SERVICES','PRODUCTS','ACCESS','CONTACT'];
+  NAMES = ['HOME','PRODUCTS','TRAINING','COMPANY','SERVICES','ACCESS','CONTACT'];
   POS = [
     [0, 0, -160, 0],
     [900, -90, -1760, -27],
     [-940, 80, -3300, 27],
     [910, -70, -4840, -27],
     [-940, 90, -6380, 27],
-    [0, 0, -7820, 0]
+    [900, -80, -7920, -27],
+    [0, 0, -9360, 0]
   ];
-  N = 6;
+  N = 7;
   D2R = Math.PI / 180;
 
   renderVals() {
@@ -338,16 +389,16 @@ class Component extends DCLogic {
         borderLeft: i>0 ? '1px solid rgba(212,164,55,.25)' : 'none', transition:'color .25s, background .25s'
       }
     }));
-    const navItems = [0,1,2,3,4,5].map(i => ({
+    const navItems = [0,1,2,3,4,5,6].map(i => ({
       label: t['nav'+i],
       onClick: () => this.flyTo(i),
       style: {
-        color: s.idx===i ? '#f5c95c' : '#8a8177', textDecoration:'none', fontSize:'.82rem', letterSpacing:'.18em',
+        color: s.idx===i ? '#f5c95c' : '#8a8177', textDecoration:'none', fontSize:'.82rem', letterSpacing:'.1em',
         transition:'color .25s', whiteSpace:'nowrap', cursor:'pointer', paddingBottom:'.3em',
         borderBottom: s.idx===i ? '1px solid #d4a437' : '1px solid transparent'
       }
     }));
-    const railDots = [0,1,2,3,4,5].map(i => ({
+    const railDots = [0,1,2,3,4,5,6].map(i => ({
       label: this.NAMES[i],
       onClick: () => this.flyTo(i),
       style: {
@@ -359,7 +410,12 @@ class Component extends DCLogic {
     }));
     return {
       t, langBtns, navItems, railDots,
+      mqBlaze: Array(4).fill(t.mqBlaze || '').join(''),
       mapOn: s.mapOn,
+      gameOn: s.gameOn,
+      openGame: () => this.openGame(),
+      closeGame: () => this.closeGame(),
+      backdropClose: e => { if (e.target === e.currentTarget) this.closeGame(); },
       stNum: String(s.idx+1).padStart(2,'0'),
       stName: this.NAMES[s.idx],
       goHome: () => this.flyTo(0),
@@ -391,6 +447,7 @@ class Component extends DCLogic {
     this.keepVideo();
     this.raf = requestAnimationFrame(this.tick);
     this.onResize = () => this.layout();
+    if (document.fonts) document.fonts.ready.then(() => this.layout());
     window.addEventListener('resize', this.onResize);
   }
 
@@ -426,6 +483,60 @@ class Component extends DCLogic {
     if (v.paused && !document.hidden && v.readyState >= 2) v.play().catch(() => {});
   }
 
+  openGame() {
+    if (this.gameOpen) return;
+    this.gameOpen = true;
+    this.killHint();
+    const v = document.getElementById('bf-bc-video'); if (v) v.pause();
+    if (this.view) this.view.style.display = 'none';
+    this.parts = [];
+    if (this.trailCtx) this.trailCtx.clearRect(0, 0, innerWidth, innerHeight);
+    this.setState({ gameOn: true }, () => this.mountGame());
+  }
+
+  closeGame() {
+    if (!this.gameOpen) return;
+    this.gameOpen = false;
+    if (this.view) this.view.style.display = '';
+    this.setState({ gameOn: false });
+  }
+
+  mountGame(tries = 0) {
+    const host = document.getElementById('bf-game-host');
+    if (!host) { if (tries < 30 && this.gameOpen) requestAnimationFrame(() => this.mountGame(tries + 1)); return; }
+    if (host.querySelector('iframe')) return;
+    const f = document.createElement('iframe');
+    f.title = 'Sky Hopper';
+    f.setAttribute('allow', 'autoplay; fullscreen; gamepad');
+    f.allowFullscreen = true;
+    f.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:0;display:block;background:#0a0908';
+    f.srcdoc = this.gameDoc();
+    f.addEventListener('load', () => { try { f.focus(); } catch (e) {} });
+    host.appendChild(f);
+  }
+
+  gameDoc() {
+    const B = new URL('SkyHopperWeb00/', document.baseURI).href;
+    const S = '<' + '/script>';
+    return '<!DOCTYPE html><html><head><meta charset="utf-8">' +
+      '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">' +
+      '<style>html,body{margin:0;height:100%;background:#0a0908;overflow:hidden}' +
+      '#c{display:block;width:100%;height:100%;background:#0a0908;outline:none}' +
+      '#ld{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:#0a0908;font-family:"Bebas Neue",Oswald,sans-serif;font-size:13px;letter-spacing:.45em;color:#8a8177;transition:opacity .6s}' +
+      '#bar{width:min(240px,50%);height:1px;background:rgba(212,164,55,.2);overflow:hidden}' +
+      '#fill{height:100%;width:0;background:linear-gradient(90deg,#b06a1f,#f5c95c);transition:width .25s}</style></head><body>' +
+      '<canvas id="c" tabindex="-1"></canvas>' +
+      '<div id="ld"><span id="lt">LOADING</span><div id="bar"><div id="fill"></div></div></div>' +
+      '<script>window.alert=function(m){console.warn(m)};' + S +
+      '<script src="' + B + 'Build/SkyHopperWeb3.loader.js">' + S +
+      '<script>(function(){var B=' + JSON.stringify(B) + ',c=document.getElementById("c"),ld=document.getElementById("ld"),lt=document.getElementById("lt"),fill=document.getElementById("fill");' +
+      'if(typeof createUnityInstance!=="function"){lt.textContent="LOAD ERROR";return;}' +
+      'createUnityInstance(c,{dataUrl:B+"Build/SkyHopperWeb3.data.unityweb",frameworkUrl:B+"Build/SkyHopperWeb3.framework.js.unityweb",codeUrl:B+"Build/SkyHopperWeb3.wasm.unityweb",streamingAssetsUrl:B+"StreamingAssets",companyName:"DefaultCompany",productName:"Sky Hopper",productVersion:"1.0"},function(p){fill.style.width=(p*100)+"%";})' +
+      '.then(function(){ld.style.opacity="0";setTimeout(function(){ld.remove();},700);c.focus();})' +
+      '.catch(function(m){lt.textContent="LOAD ERROR";console.error(m);});})();' + S +
+      '</body></html>';
+  }
+
   initTrail() {
     if (this.reduce) return;
     const cv = document.getElementById('bf-trail');
@@ -444,6 +555,7 @@ class Component extends DCLogic {
     window.addEventListener('resize', size);
     this.lastTrail = { x: 0, y: 0, has: false };
     this.onTrailMove = e => {
+      if (this.gameOpen) return;
       const x = e.clientX, y = e.clientY;
       if (this.lastTrail.has) {
         const dx = x - this.lastTrail.x, dy = y - this.lastTrail.y;
@@ -498,7 +610,7 @@ class Component extends DCLogic {
   waypoint(i) {
     const p = this.panelPos(i), r = p.face * this.D2R;
     const nx = Math.sin(r), nz = Math.cos(r);
-    const stand = [40, -285, 40, -285, 40, -120][i];
+    const stand = [40, -285, 40, -285, 40, -285, -120][i];
     return { x: p.x + nx*stand, y: p.y, z: p.z + nz*stand, yaw: r };
   }
 
@@ -583,7 +695,17 @@ class Component extends DCLogic {
       this.fadeItems.push({ el, wx:p.x, wy:p.y, wz:p.z, base:1, station:true });
     });
     const total = Math.abs(this.POS[this.N-1][2]) * this.depth;
-    [['bf-mq1', -1050], ['bf-mq2', -4400]].forEach(([id, z]) => {
+    const mq3 = document.getElementById('bf-mq3');
+    if (mq3) {
+      const w0 = this.waypoint(0);
+      const sM = 1250 / (1250 + w0.z + 1050 * this.depth);
+      const sH = 1250 / (1250 + w0.z - this.panelPos(0).z);
+      const nav = document.querySelector('nav');
+      const navB = nav ? nav.getBoundingClientRect().bottom : 82;
+      const heroTop = innerHeight / 2 - (this.sections[0] ? this.sections[0].offsetHeight : 340) * sH / 2;
+      mq3.dataset.mqy = Math.round(((navB + heroTop) / 2 - innerHeight / 2) / sM);
+    }
+    [['bf-mq1', -1050], ['bf-mq2', -4400], ['bf-mq3', -1050]].forEach(([id, z]) => {
       const el = document.getElementById(id);
       if (!el) return;
       const y = parseFloat(el.dataset.mqy);
@@ -719,6 +841,7 @@ class Component extends DCLogic {
     }, { passive: false });
 
     this.onKey = e => {
+      if (this.gameOpen) { if (e.key === 'Escape') this.closeGame(); return; }
       const k = e.key, step = 240;
       if (k === 'ArrowUp' || k === 'w' || k === 'W') { e.preventDefault(); this.auto = false; this.moveForward(step); this.killHint(); }
       else if (k === 'ArrowDown' || k === 's' || k === 'S') { e.preventDefault(); this.auto = false; this.moveForward(-step); this.killHint(); }
@@ -742,6 +865,7 @@ class Component extends DCLogic {
 
   tick = () => {
     this.raf = requestAnimationFrame(this.tick);
+    if (this.gameOpen) return;
     if (this.trailCtx) this.drawTrail();
     this._vf = (this._vf || 0) + 1;
     if (this._vf % 30 === 0) this.keepVideo();
@@ -785,7 +909,7 @@ class Component extends DCLogic {
     }
     if (idx !== this.state.idx) {
       const patch = { idx };
-      if (idx === 4 && !this.state.mapOn) patch.mapOn = true;
+      if (idx === 5 && !this.state.mapOn) patch.mapOn = true;
       this.setState(patch);
     }
   };
