@@ -100,9 +100,6 @@
               <span style="font-size:.66rem;letter-spacing:.3em;color:#8a8177">MADE WITH UNITY</span>
             </button>
             <p style="margin:0;color:#8a8177;font-size:.92rem">{{ t.trDesc }}</p>
-            <div style="display:flex;gap:.9em;margin-top:1.6em;flex-wrap:wrap">
-              <a href="./SkyHopperWeb00/index.html" target="_blank" rel="noopener" style="border:1px solid #d4a437;padding:.7em 1.4em;color:#f5c95c;text-decoration:none;font-family:'Bebas Neue','Oswald',sans-serif;letter-spacing:.18em;font-size:.95rem;display:flex;align-items:center;gap:.6em" style-hover="background:rgba(212,164,55,.12)">{{ t.trTab }} ↗</a>
-            </div>
           </div>
           <div style="position:absolute;left:0;right:0;bottom:0;height:2px;z-index:2;background:linear-gradient(90deg, transparent, #b06a1f 20%, #f5c95c 50%, #b06a1f 80%, transparent);box-shadow:0 0 18px 2px rgba(245,201,92,.45)"></div>
         </section>
@@ -225,19 +222,17 @@
   </div>
 
   <sc-if value="{{ gameOn }}" hint-placeholder-val="{{ false }}">
-    <div onClick="{{ backdropClose }}" style="position:fixed;inset:0;z-index:260;display:flex;align-items:center;justify-content:center;padding:clamp(14px,3vw,40px);background:rgba(10,9,8,.93)">
-      <div role="dialog" aria-label="Sky Hopper" style="position:relative;width:min(100%, calc((100vh - 150px) * 1.6), 1180px);border:1px solid rgba(212,164,55,.45);background:#0a0908;box-shadow:0 0 80px rgba(176,106,31,.22)">
-        <div style="position:absolute;top:-1px;left:-1px;width:14px;height:14px;border-top:2px solid #d4a437;border-left:2px solid #d4a437;z-index:3;pointer-events:none"></div>
-        <div style="position:absolute;bottom:-1px;right:-1px;width:14px;height:14px;border-bottom:2px solid #d4a437;border-right:2px solid #d4a437;z-index:3;pointer-events:none"></div>
-        <div style="display:flex;align-items:center;justify-content:space-between;gap:1em;padding:.75em 1em .75em 1.6em;border-bottom:1px solid rgba(212,164,55,.2);font-family:'Bebas Neue','Oswald',sans-serif;font-size:.8rem;letter-spacing:.3em;color:#d4a437">
+    <div id="bf-game-root" style="position:fixed;inset:0;z-index:260;display:flex;flex-direction:column;background:#0a0908">
+      <div role="dialog" aria-label="Sky Hopper" style="position:relative;flex:1;min-height:0;display:flex;flex-direction:column;background:#0a0908">
+        <div style="flex:none;display:flex;align-items:center;justify-content:space-between;gap:1em;padding:.7em 1em .7em 1.6em;border-bottom:1px solid rgba(212,164,55,.2);font-family:'Bebas Neue','Oswald',sans-serif;font-size:.8rem;letter-spacing:.3em;color:#d4a437">
           <span style="display:flex;align-items:center;gap:.8em;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis"><span style="width:7px;height:7px;transform:rotate(45deg);background:linear-gradient(135deg,#f5c95c,#b06a1f);flex:none"></span>TRAINING 01 — SKY HOPPER</span>
           <div style="display:flex;align-items:center;gap:1.4em;flex:none">
-            <a href="./SkyHopperWeb00/index.html" target="_blank" rel="noopener" style="color:#8a8177;text-decoration:none;font-family:'Noto Sans JP',sans-serif;font-size:.72rem;letter-spacing:.15em;white-space:nowrap" style-hover="color:#f5c95c">{{ t.trTab }} ↗</a>
             <button type="button" onClick="{{ closeGame }}" style="appearance:none;background:transparent;border:1px solid rgba(212,164,55,.45);cursor:pointer;color:#f5c95c;font-family:'Bebas Neue','Oswald',sans-serif;font-size:.8rem;letter-spacing:.25em;padding:.5em 1em .4em;display:flex;align-items:center;gap:.6em;white-space:nowrap" style-hover="background:rgba(212,164,55,.12)">✕ {{ t.trClose }}</button>
           </div>
         </div>
-        <div id="bf-game-host" style="position:relative;width:100%;aspect-ratio:16/10;background:#0a0908"></div>
-        <div style="position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg, transparent, #b06a1f 20%, #f5c95c 50%, #b06a1f 80%, transparent);box-shadow:0 0 18px 2px rgba(245,201,92,.45);pointer-events:none"></div>
+        <div style="flex:1;min-height:0;display:flex;align-items:center;justify-content:center">
+          <div id="bf-game-host" style="position:relative;width:min(100%, calc((100vh - 46px) * 1.6));aspect-ratio:16/10;max-height:100%;background:#0a0908"></div>
+        </div>
       </div>
     </div>
   </sc-if>
@@ -284,7 +279,7 @@ class Component extends DCLogic {
       accSK:'YAQIN BEKAT',accSV:'“Oybek” metro bekatidan 5 daqiqa piyoda',accHK:'ISH VAQTI',accHV:'Ish kunlari 9:00–18:00',
       invA:'Loyihani muhokama qilish, hamkorlik taklif etish yoki ishga joylashish —',invB:'biz bilan bogʻlaning.',
       cHours:' (ish kunlari 9:00–18:00)',cta:'BOGʻLANISH',retTop:'BOSHIGA QAYTISH',
-      trCatch:'Oʻquv temirxonasidan — osmonga',trPlay:'OʻYNASH',trTab:'YANGI OYNADA OCHISH',trClose:'YOPISH',
+      trCatch:'Oʻquv temirxonasidan — osmonga',trPlay:'OʻYNASH',trClose:'YOPISH',
       trDesc:'Sky Hopper — xodimimiz ichki oʻquv dasturi doirasida Unityʼda yaratgan brauzer oʻyini. Gʻoyani haqiqatan oʻynasa boʻladigan oʻyingacha yetkazish yoʻlida orttirilgan tajriba buyurtma loyihalarimizda ham, oʻz taytllarimizda ham qoʻl keladi.',
       title:'Blackforge | Oʻyin ishlab chiqish × Web3 tizimlari'
     },
@@ -309,7 +304,7 @@ class Component extends DCLogic {
       accSK:'最寄駅',accSV:'地下鉄「オイベク(Oybek)駅」より徒歩5分',accHK:'営業時間',accHV:'平日 9:00–18:00',
       invA:'開発のご相談、協業のご提案、採用について。',invB:'まずはお気軽にご連絡ください。',
       cHours:'(平日 9:00–18:00)',cta:'GET IN TOUCH',retTop:'最初に戻る',
-      trCatch:'研修の炉から、空へ跳ぶ一作',trPlay:'PLAY',trTab:'新しいタブで遊ぶ',trClose:'閉じる',
+      trCatch:'研修の炉から、空へ跳ぶ一作',trPlay:'PLAY',trClose:'閉じる',
       trDesc:'『Sky Hopper』は、社内研修の一環として社員が Unity で制作したブラウザゲームです。アイデアを形にし、実際に遊べるところまで作り切る。研修で積み重ねたその経験は、クライアントワークにも自社タイトルにも生かされていきます。',
       title:'Blackforge | ゲーム開発 × Web3システム開発'
     },
@@ -334,7 +329,7 @@ class Component extends DCLogic {
       accSK:'NEAREST STATION',accSV:'5 min walk from Oybek metro station',accHK:'OFFICE HOURS',accHV:'Weekdays 9:00\u201318:00 (UZT)',
       invA:'A project to discuss, a partnership to propose, or a role to apply for —',invB:'we\u2019d love to hear from you.',
       cHours:' (Weekdays 9:00\u201318:00 UZT)',cta:'GET IN TOUCH',retTop:'RETURN TO START',
-      trCatch:'Out of the training forge, into the sky',trPlay:'PLAY',trTab:'OPEN IN NEW TAB',trClose:'CLOSE',
+      trCatch:'Out of the training forge, into the sky',trPlay:'PLAY',trClose:'CLOSE',
       trDesc:'Sky Hopper is a browser game built in Unity by a member of our team as part of our in-house training. Taking an idea all the way to something people can actually play builds experience that carries straight into our client work and our own titles.',
       title:'Blackforge | Game Development × Web3 Systems'
     },
@@ -359,7 +354,7 @@ class Component extends DCLogic {
       accSK:'БЛИЖАЙШАЯ СТАНЦИЯ',accSV:'5 минут пешком от станции метро «Ойбек»',accHK:'ЧАСЫ РАБОТЫ',accHV:'Будни 9:00–18:00',
       invA:'Обсудить проект, предложить партнёрство или откликнуться на вакансию —',invB:'напишите нам.',
       cHours:' (будни 9:00–18:00)',cta:'НАПИСАТЬ НАМ',retTop:'В НАЧАЛО',
-      trCatch:'Из учебной кузницы — в небо',trPlay:'ИГРАТЬ',trTab:'В НОВОЙ ВКЛАДКЕ',trClose:'ЗАКРЫТЬ',
+      trCatch:'Из учебной кузницы — в небо',trPlay:'ИГРАТЬ',trClose:'ЗАКРЫТЬ',
       trDesc:'Sky Hopper — браузерная игра, созданная нашим сотрудником на Unity в рамках внутреннего обучения. Путь от идеи до игры, в которую действительно можно сыграть, даёт опыт, который мы применяем и в заказных проектах, и в собственных тайтлах.',
       title:'Blackforge | Разработка игр × Web3-системы'
     }
@@ -415,7 +410,6 @@ class Component extends DCLogic {
       gameOn: s.gameOn,
       openGame: () => this.openGame(),
       closeGame: () => this.closeGame(),
-      backdropClose: e => { if (e.target === e.currentTarget) this.closeGame(); },
       stNum: String(s.idx+1).padStart(2,'0'),
       stName: this.NAMES[s.idx],
       goHome: () => this.flyTo(0),
@@ -472,6 +466,7 @@ class Component extends DCLogic {
     window.removeEventListener('keydown', this.onKey);
     if (this.onTrailMove) window.removeEventListener('pointermove', this.onTrailMove);
     if (this._trailResize) window.removeEventListener('resize', this._trailResize);
+    if (this.onFsChange) document.removeEventListener('fullscreenchange', this.onFsChange);
   }
 
   keepVideo() {
@@ -492,6 +487,12 @@ class Component extends DCLogic {
     this.parts = [];
     if (this.trailCtx) this.trailCtx.clearRect(0, 0, innerWidth, innerHeight);
     this.setState({ gameOn: true }, () => this.mountGame());
+    const root = document.documentElement;
+    if (root.requestFullscreen && !document.fullscreenElement) root.requestFullscreen().catch(() => {});
+    if (!this.onFsChange) {
+      this.onFsChange = () => { if (!document.fullscreenElement && this.gameOpen && this.fsWasOn) this.closeGame(); this.fsWasOn = !!document.fullscreenElement; };
+      document.addEventListener('fullscreenchange', this.onFsChange);
+    }
   }
 
   closeGame() {
@@ -499,6 +500,7 @@ class Component extends DCLogic {
     this.gameOpen = false;
     if (this.view) this.view.style.display = '';
     this.setState({ gameOn: false });
+    if (document.fullscreenElement && document.exitFullscreen) document.exitFullscreen().catch(() => {});
   }
 
   mountGame(tries = 0) {
