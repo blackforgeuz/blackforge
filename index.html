@@ -527,7 +527,10 @@ class Component extends DCLogic {
   }
 
   gameDoc() {
-    const B = new URL('SkyHopperWeb00/', document.baseURI).href;
+    // ビルド名（フォルダ名＝ファイル名の先頭）。新しいビルドを上げたらここだけ変更
+    const G = 'SkyHopperWeb004';
+    const B = new URL(G + '/', document.baseURI).href;
+    const P = B + 'Build/' + G;
     const S = '<' + '/script>';
     return '<!DOCTYPE html><html><head><meta charset="utf-8">' +
       '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">' +
@@ -539,10 +542,10 @@ class Component extends DCLogic {
       '<canvas id="c" tabindex="-1"></canvas>' +
       '<div id="ld"><span id="lt">LOADING</span><div id="bar"><div id="fill"></div></div></div>' +
       '<script>window.alert=function(m){console.warn(m)};' + S +
-      '<script src="' + B + 'Build/SkyHopperWeb3.loader.js">' + S +
-      '<script>(function(){var B=' + JSON.stringify(B) + ',c=document.getElementById("c"),ld=document.getElementById("ld"),lt=document.getElementById("lt"),fill=document.getElementById("fill");' +
+      '<script src="' + P + '.loader.js">' + S +
+      '<script>(function(){var B=' + JSON.stringify(B) + ',P=' + JSON.stringify(P) + ',c=document.getElementById("c"),ld=document.getElementById("ld"),lt=document.getElementById("lt"),fill=document.getElementById("fill");' +
       'if(typeof createUnityInstance!=="function"){lt.textContent="LOAD ERROR";return;}' +
-      'createUnityInstance(c,{dataUrl:B+"Build/SkyHopperWeb3.data.unityweb",frameworkUrl:B+"Build/SkyHopperWeb3.framework.js.unityweb",codeUrl:B+"Build/SkyHopperWeb3.wasm.unityweb",streamingAssetsUrl:B+"StreamingAssets",companyName:"DefaultCompany",productName:"Sky Hopper",productVersion:"1.0"},function(p){fill.style.width=(p*100)+"%";})' +
+      'createUnityInstance(c,{dataUrl:P+".data.unityweb",frameworkUrl:P+".framework.js.unityweb",codeUrl:P+".wasm.unityweb",streamingAssetsUrl:B+"StreamingAssets",companyName:"DefaultCompany",productName:"Sky Hopper",productVersion:"1.0"},function(p){fill.style.width=(p*100)+"%";})' +
       '.then(function(){ld.style.opacity="0";setTimeout(function(){ld.remove();},700);c.focus();})' +
       '.catch(function(m){lt.textContent="LOAD ERROR";console.error(m);});})();' + S +
       '</body></html>';
